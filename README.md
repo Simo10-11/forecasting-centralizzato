@@ -12,7 +12,7 @@ Questo progetto è il **termine di paragone** dei due progetti federati ([`fl-ii
 ## Requisiti
 
 - **Python 3.11+** (serve `tomllib` della libreria standard per leggere `config.toml`)
-- Dipendenze: `torch`, `cesnet-tszoo`, `numpy`, `scikit-learn` (quest'ultima usata solo da `baseline.py`)
+- Dipendenze: `torch`, `cesnet-tszoo`, `numpy`, `scikit-learn` (quest'ultima usata solo da `baseline.py`), `ipython` (dipendenza transitiva di `cesnet-tszoo`, non installata automaticamente da tutti i resolver: senza va in `ModuleNotFoundError: No module named 'IPython'`)
 - ~150 MB liberi su disco: alla prima esecuzione `cesnet-tszoo` scarica automaticamente il dataset dentro `data/`
 
 ---
@@ -27,7 +27,7 @@ cd forecasting-centralizzato
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 
-pip install torch cesnet-tszoo numpy scikit-learn
+pip install torch cesnet-tszoo numpy scikit-learn ipython
 ```
 
 ---
